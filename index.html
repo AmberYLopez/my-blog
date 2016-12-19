@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="//cdn.bootcss.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" rel="stylesheet">
+    <!--<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/index-style.css" rel="stylesheet">
+    <!--<script src="//cdn.bootcss.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>-->
+    <script src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.typetype.js"></script>
+    <title>首页</title>
+</head>
+<body>
+
+<div class="wrap">
+    <div class="banner">
+        <div class="nav">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#tm-section-2">BLOG</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </div>
+        <div class="brief"></div><!--透明层-->
+        <div class="text">
+            <div class="ta">
+                <textarea spellcheck="false" class="textarea"></textarea>
+            </div>
+            <script type="text/javascript">
+                $(function () {
+                    $('.textarea').focus()
+                            .typetype("     Hello, this is Snowsnow...            ").delay(800)
+
+                            .typetype("         but  并没有什么内容.          ", {
+                                t: 200,
+                                e: 0.05,
+                            }).delay(500)
+                            .typetype("             So let's 搅基吧!");
+                })
+            </script>
+        </div>
+        <div class="more">
+            <a href="#" class="tm-intro-link">More</a>
+        </div>
+    </div>
+
+    <div class="row gray-bg">
+        <div id="tm-section-2" class="tm-section">
+            <div class="tm-container tm-container-wide">
+                <div class="tm-news-item">
+                    <div class="col-lg-6 tm-news-item-img-container">
+                        <img src="images/tm-600x300-01.jpg" alt="Image" class="img-fluid tm-news-item-img">
+                    </div>
+                    <div class="col-lg-6 tm-news-container">
+                        <p class="icon-date"><i class="fa fa-clock-o"></i>2016-10-25</p>
+                        <h2 class="tm-news-title dark-gray-text">Nulla molestie euismod</h2>
+                        <p class="tm-news-text">Lumino theme is a Bootstrap 4.0 mobile compatible layout for your
+                            website. Check "columns" page for one, two, three columns and tables.</p>
+                        <p class="icon-eye"><i class="fa fa-eye"></i>325</p>
+                        <p class="icon-like"><i class="fa fa-thumbs-up"></i>245</p>
+                        <a href="#" class="btn tm-light-blue-bordered-btn tm-news-link">Read</a>
+                    </div>
+                </div>
+
+                <div class="tm-news-item">
+                    <div class="col-lg-6 flex-order-2 tm-news-item-img-container">
+                        <img src="images/tm-600x300-02.jpg" alt="Image" class="img-fluid tm-news-item-img">
+                    </div>
+                    <div class="col-lg-6 tm-news-container flex-order-1">
+                        <p class="icon-date"><i class="fa fa-clock-o"></i>2016-10-25</p>
+                        <h2 class="tm-news-title dark-gray-text">Nulla molestie euismod</h2>
+                        <p class="tm-news-text">You may download, modify and use this template as you wish. Lumino HTML5
+                            template is a fully responsive mobile ready for any kind of website.</p>
+                        <p class="icon-eye"><i class="fa fa-eye"></i>325</p>
+                        <p class="icon-like"><i class="fa fa-thumbs-up"></i>245</p>
+                        <a href="#" class="btn tm-light-blue-bordered-btn tm-news-link">Read</a>
+                    </div>
+                </div>
+
+                <div class="tm-news-item">
+                    <div class="col-lg-6 tm-news-item-img-container">
+                        <img src="images/tm-600x300-03.jpg" alt="Image" class="img-fluid tm-news-item-img">
+                    </div>
+                    <div class="col-lg-6 tm-news-container">
+                        <p class="icon-date"><i class="fa fa-clock-o"></i>2016-10-25</p>
+                        <h2 class="tm-news-title dark-gray-text">Nulla molestie euismod</h2>
+                        <p class="tm-news-text">Credit goes to <a rel="nofollow" href="http://unsplash.com"
+                                                                  target="_parent">Unsplash</a> for images used in this
+                            website template. Nulla sit amet tristique lacus. Etiam blandit ex vitae mauris gravida.</p>
+                        <p class="icon-eye"><i class="fa fa-eye"></i>325</p>
+                        <p class="icon-like"><i class="fa fa-thumbs-up"></i>245</p>
+                        <a href="#" class="btn tm-light-blue-bordered-btn tm-news-link">Read</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-text">
+            XXX-BLOG--作者Avnjd Bjchhj<br/>
+            Copyright © 2016 All rights reserved.
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        var mobileTopOffset = 54;
+        var desktopTopOffset = 80;
+        var topOffset = desktopTopOffset;
+        if ($(window).width() <= 767) {
+            topOffset = mobileTopOffset;
+        }
+
+        $('#tmNavbar').singlePageNav({
+            'currentClass': "active",
+            offset: topOffset,
+            'filter': ':not(.external)'
+        });
+
+
+        $(window).resize(function () {
+            if ($(window).width() <= 767) {
+                topOffset = mobileTopOffset;
+            }
+            else {
+                topOffset = desktopTopOffset;
+            }
+
+            $('#tmNavbar').singlePageNav({
+                'currentClass': "active",
+                offset: topOffset,
+                'filter': ':not(.external)'
+            });
+        });
+        /* Collapse menu after click
+         -----------------------------------------*/
+        $('#tmNavbar a').click(function () {
+            $('#tmNavbar').collapse('hide');
+        });
+        /* Turn navbar background to solid color starting at section 2
+         ---------------------------------------------------------------*/
+        var target = $("#tm-section-2").offset().top - topOffset;
+
+        if ($(window).scrollTop() >= target) {
+            $(".tm-navbar-container").addClass("bg-inverse");
+        }
+        else {
+            $(".tm-navbar-container").removeClass("bg-inverse");
+        }
+
+        $(window).scroll(function () {
+
+            if ($(this).scrollTop() >= target) {
+                $(".tm-navbar-container").addClass("bg-inverse");
+            }
+            else {
+                $(".tm-navbar-container").removeClass("bg-inverse");
+            }
+        });
+
+        /* Smooth Scrolling
+         * https://css-tricks.com/snippets/jquery/smooth-scrolling/
+         --------------------------------------------------------------*/
+        $('a[href*="#"]:not([href="#"])').click(function () {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                    && location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+
+                if (target.length) {
+
+                    $('html, body').animate({
+                        scrollTop: target.offset().top - topOffset
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+        /* Magnific pop up
+         ------------------------- */
+        $('.tm-img-grid').magnificPopup({
+            delegate: 'a', // child items selector, by clicking on it popup will open
+            type: 'image',
+            gallery: {enabled: true}
+        });
+    });
+</script>
+</body>
+</html>
