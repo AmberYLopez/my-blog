@@ -219,15 +219,15 @@ p.icon-date { /*日期*/
 }
 
 p.icon-eye { /*浏览*/
-    position: absolute;
+    position: relative;
     margin-top: 10px;
-    margin-left: 100px;
     font-size: 15px;
 }
 
 p.icon-like { /*点赞*/
-    position: absolute;
-    margin-top: 10px;
+    position: relative;
+    margin-top: -40px;
+    margin-left: 100px;
     font-size: 15px;
 }
 
